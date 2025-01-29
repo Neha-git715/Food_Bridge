@@ -1,0 +1,167 @@
+
+body {
+    background-color: white;
+}
+
+.nav {
+    color: aliceblue;
+    background-color: hsl(0, 0%, 13%);
+    height: 14%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    border: 2px;
+    border-color: solid black;
+}
+
+.nav_list {
+    display: inline-flex;
+    gap: 16vh;
+    padding-top: 22px;
+    font-size: bolder;
+    text-shadow: 5px 5px 10px #e68a3f;
+
+}
+
+.nav_item {
+    list-style: none;
+    color: white;
+}
+
+.nav_item:hover {
+    color: hsl(86, 45%, 54%);
+    font-weight: bolder;
+    cursor: pointer;
+    text-shadow: 5px 5px 3px hsl(86, 45%, 54%);
+}
+
+.img {
+    color: hsl(86, 45%, 54%);
+}
+
+#nav_link {
+    color: white;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.loginbutton {
+    position: relative;
+    background-color: hsl(86, 45%, 54%);
+    color: white;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+.loginbutton:not(.loginbutton-outline)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid hsl(86, 45%, 54%);
+    transform: translate(5px, 5px);
+    transition: 0.25s ease;
+}
+
+.loginbutton:is(:hover, :focus)::after {
+    transform: translate(0, 0);
+}
+
+.loginbutton-outline {
+    outline: transparent;
+    border: 10px solid white;
+    transform: translate(5px, 5px);
+}
+
+.loginbutton:hover {
+    transform: translate(0px, 0px);
+    font-weight: bolder;
+    color: hsl(86, 54%, 28%);
+}
+
+.section {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 25px;
+    gap: 20px;
+    /* border: 2px solid black; */
+    /* background-image: url("Food\ Bridge/assets/faqbg.jpg"); */
+
+}
+
+
+.bigboi {
+    /* margin-top: 5%; */
+    /* max-width: 60%; */
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    color: white;
+    /* border: 2px solid red; */
+    padding: 50px;
+    /* display: flex; */
+    /* grid-area: bigboi; */
+    background-image: url(assets/faqbg.jpg);
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.QAs {
+    offset-position: 25%;
+    position: relative;
+    /* margin-top: -10%; */
+    /* grid-area: QAs; */
+    /* border: 2px solid blue; */
+
+}
+
+.question {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 125%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 2vh;
+}
+
+.question:hover {
+    background-color: #ccc;
+}
+
+.answer {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+footer{
+    background-color: hsl(220, 8%, 14%);
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+.footer{
+    background-color: hsl(228, 10%, 10%);
+    width: 100%;
+    text-align: center;
+}

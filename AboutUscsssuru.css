@@ -1,0 +1,220 @@
+body {
+    background-color: white;
+}
+
+.nav {
+    color: aliceblue;
+    background-color: hsl(0, 0%, 13%);
+    height: 14%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    border: 2px;
+    border-color: solid black;
+}
+
+.nav_list {
+    display: inline-flex;
+    gap: 16vh;
+    padding-top: 22px;
+    font-size: bolder;
+    text-shadow: 5px 5px 10px #e68a3f;
+
+}
+
+.nav_item {
+    list-style: none;
+    color: white;
+}
+
+.nav_item:hover {
+    color: hsl(86, 45%, 54%);
+    font-weight: bolder;
+    cursor: pointer;
+    text-shadow: 5px 5px 3px hsl(86, 45%, 54%);
+}
+
+.img {
+    color: hsl(86, 45%, 54%);
+}
+
+#nav_link {
+    color: white;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.loginbutton {
+    position: relative;
+    background-color: hsl(86, 45%, 54%);
+    color: white;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+.loginbutton:not(.loginbutton-outline)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid hsl(86, 45%, 54%);
+    transform: translate(5px, 5px);
+    transition: 0.25s ease;
+}
+
+.loginbutton:is(:hover, :focus)::after {
+    transform: translate(0, 0);
+}
+
+.loginbutton-outline {
+    outline: transparent;
+    border: 10px solid white;
+    transform: translate(5px, 5px);
+}
+
+.loginbutton:hover {
+    transform: translate(0px, 0px);
+    font-weight: bolder;
+    color: hsl(86, 54%, 28%);
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/* .collage{
+    background-image: url(assets/collage.png);
+    background-size: cover;
+} */
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 20px;
+    background-color: hsl(0, 0%, 91%);
+    border: white;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.tab-options button {
+    background-color: hsl(0, 0%, 70%);
+    color: hsl(0, 0%, 25%);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-500);
+    padding: 15px 48px;
+    margin-right: 25px;
+    border: white;
+}
+
+.tab-options button.active {
+    background-color: hsl(86, 45%, 54%);
+    color: white;
+}
+
+.tab-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 75%; */
+    padding: 10px 80px;
+    /* border: 2px solid red; */
+}
+
+.tab-content>div {
+    display: none;
+}
+
+.tab-content>div.active {
+    display: block;
+}
+
+.content div {
+    /* background-color: blue;  */
+    /* border: 2px solid red;  */
+    text-align: center;
+    color: black;
+}
+
+.volunteer {
+    display: flex;
+    justify-content: right;
+    padding-right: 80px;
+}
+
+.volunteer-btn {
+    color: white;
+}
+
+.volunteer-btn button {
+    position: relative;
+    background-color: var(--btn-bg, black);
+    color: white;
+    font-weight: 600;
+    padding: 15px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    transition: 0.25s ease;
+    border: none;
+}
+
+
+.volunteer-btn button:not(.volunteer-btn-outline)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid black;
+    transform: translate(5px, 5px);
+    transition: 0.25s ease;
+}
+
+.volunteer-btn button:is(:hover, :focus)::after {
+    transform: translate(0, 0);
+    border: hsl(86, 45%, 54%);
+    --btn-bg: hsl(86, 45%, 54%);
+    color: hsl(0, 0%, 100%);
+}
+
+.volunteer-btn:is(:hover, :focus) {
+    --btn-bg: hsl(86, 45%, 54%);
+}
+
+.volunteer-btn-outline {
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+footer {
+    background-color: hsl(220, 8%, 14%);
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+.footer {
+    background-color: hsl(228, 10%, 10%);
+    width: 100%;
+    text-align: center;
+}

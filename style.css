@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300;500&display=swap');
+
+:root {
+    --font-main: 'Kalnia', serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 18px;
+    padding-top: 5%;
+}
+
+.nav {
+    color: aliceblue;
+    background-color: hsl(0, 0%, 13%);
+    height: 14%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    border: 2px;
+    border-color: solid black;
+}
+
+.nav_list {
+    display: inline-flex;
+    gap: 16vh;
+    padding-top: 22px;
+    font-size: bolder;
+    text-shadow: 5px 5px 10px #e68a3f;
+
+}
+
+.nav_item {
+    list-style: none;
+    color: white;
+}
+
+.nav_item:hover {
+    color: hsl(86, 45%, 54%);
+    font-weight: bolder;
+    cursor: pointer;
+    text-shadow: 5px 5px 3px hsl(86, 45%, 54%);
+}
+
+.img {
+    color: hsl(86, 45%, 54%);
+}
+
+#nav_link {
+    color: white;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.loginbutton {
+    position: relative;
+    background-color: hsl(86, 45%, 54%);
+    color: white;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+.loginbutton:not(.loginbutton-outline)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid hsl(86, 45%, 54%);
+    transform: translate(5px, 5px);
+    transition: 0.25s ease;
+}
+
+.loginbutton:is(:hover, :focus)::after {
+    transform: translate(0, 0);
+}
+
+.loginbutton-outline {
+    outline: transparent;
+    border: 10px solid white;
+    transform: translate(5px, 5px);
+}
+
+.loginbutton:hover {
+    transform: translate(0px, 0px);
+    font-weight: bolder;
+    color: hsl(86, 54%, 28%);
+}
+
+/* ************************************************************************************************************************************ */
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* background-image:url(m_img.jpg);
+    background-size:auto;
+    background-size: 100% 100%;
+    background-blend-mode: darken; */
+}
+
+.options {
+    /* overlay:inherit; */
+    display: flex;
+    padding-top: 13px;
+    gap: 3rem;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: hsl(0, 0%, 13%);
+
+}
+
+.options_opt {
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    padding: 0.5rem;
+    font-weight: bolder;
+    text-shadow: 5px 5px 3px #e68a3f;
+}
+
+.options_opt:hover {
+    color: hsl(86, 45%, 54%);
+    font-weight: bolder;
+}
+
+.m_img {
+    width: 87%;
+    padding-right: 0px;
+
+}
+
+/* ************************************************************************************************************************************* */
+.container {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+#demo {
+    font-size: larger;
+}
+
+.section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.swiper {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mySwiper {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.swiper-slide {
+    flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.slide_1,
+.slide_2,
+.slide_3 {
+    padding: 5px;
+    width: 50%;
+}
+
+footer {
+    color: aliceblue;
+    height: 60px;
+    padding-top: 10px;
+    background-color: hsl(0, 0%, 13%);
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #292828;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #717171;
+}
+
+
+/* ***************************************************************************************************************************************** */
+.container2 {
+    padding: 50px 100px;
+    background-color: #e7f7e7;
+    /* mix-blend-mode:lighten; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingText {
+    color: #333;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.joinUsText {
+    color: hsl(86, 54%, 28%);
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.joinUsParagraph {
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.joinButton {
+    font-size: 20px;
+    /* border-radius: 7px;  */
+    cursor: pointer;
+    background-color: hsl(86, 45%, 54%);
+    color: white;
+    padding: 12px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.25s ease;
+    text-decoration: none;
+}
+
+.joinButton a {
+    text-decoration: none;
+    color: white;
+}
+
+.joinButton a:hover {
+    color: hsl(86, 54%, 28%);
+    font-weight: bolder;
+}
+
+.col-md-2,
+.col-md-8,
+.col-md-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    box-sizing: border-box;
+}
+
+/* ************************************************************************************************************************************** */
+
+.section.event {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: #333;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-subtitle img {
+    margin: 0 10px;
+}
+
+.section-title {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    width: 300px;
+}
+
+.event-card:hover {
+    transform: translateY(-18px);
+}
+
+.card-time {
+    background-color: hsl(86, 45%, 54%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.card-time .month,
+.card-time .date {
+    padding: 5px;
+}
+
+
+.wrapper {
+    padding: 20px;
+}
+
+.card-content {
+    margin-bottom: 20px;
+}
+
+
+.card-subtitle {
+    color: black;
+    font-size: 25px;
+}
+
+
+.card-title {
+    color: #333;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+
+.card-text {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e5e5e5;
+}
+
+/* homepage chya css amdhe he add kr-- */
+
+
+.btn a {
+    background-color: hsl(86, 45%, 54%); 
+    color: #fff; 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    text-transform: uppercase; 
+    display: inline-flex; 
+    align-items: center; 
+    text-decoration: none;
+}
+
+
+.btn:not(:last-child) {
+    margin-right: 20px; 
+}
+
+.btn:hover {
+    background-color: hsl(86, 45%, 54%); 
+}
+.btn-secondary{
+    /* background-color: hsl(86, 45%, 54%); */
+    color:hsl(86, 45%, 54%); 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    text-transform: uppercase; 
+}
+.btn-secondary a{
+    text-decoration: none;
+    color:white;
+}
+.btn-secondary a:hover{
+    color: greenyellow;
+}
+.btn-secondary a:visited {
+    color: white;
+}
+
+.achievements_cards {
+    /* display: flex; */
+    justify-content: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    position: absolute;
+    top: 30%;
+    /* Adjust according to your layout */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 2; */
+    /* Ensure the cards stay above other elements */
+}
+
+.achievement_card {
+    flex: 0 0 calc(50% - 20px);
+    margin: 20px;
+    padding: 20px 70px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    position: static;
+}
+
+.achievement_card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement_icon {
+    font-size: 48px;
+    color: #e68a3f;
+}
+
+.count {
+    font-size: 36px;
+    color: #333333;
+    margin-top: 10px;
+}
+
+.p {
+    font-size: 18px;
+    color: #666666;
+}
